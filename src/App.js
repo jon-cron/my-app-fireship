@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Card from './components/Card';
 import shuffle from './utilities/shuffle';
 
@@ -6,6 +6,9 @@ import shuffle from './utilities/shuffle';
 
 function App() {
   const [cards, setCards] = useState(shuffle); // Cards array from assets
+  const [pickOne, setPickOne] = useState(null)
+  const [pickTwo, setPickTwo] = useState(null)
+  const [disabled, setDisabled] = useState(false)
 
   return (
     <>
