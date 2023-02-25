@@ -1,24 +1,29 @@
-import React, {useState} from 'react';
-import shuffle from './Utilities/shuffle.js'
-import Card from "./Components/Card.jsx";
+import { useState } from 'react';
+import Card from './components/Card';
+import shuffle from './utilities/shuffle';
+
+
 
 function App() {
-  const [cards, setCards] = useState(shuffle)
+  const [cards, setCards] = useState(shuffle); // Cards array from assets
+
   return (
     <>
-    <div className="grid">
-    {cards.map((card) => {
-      const {image, id, matched} = card;
-      return (
-        <Card
-        key={id}
-        image={image}
-        selected={false}
-        onClick={()=> {}}
-        />
-      )
-    })}
-    </div>
+
+      <div className="grid">
+        {cards.map((card) => {
+          const { image, id, matched } = card;
+          
+          return (
+            <Card
+              key={id}
+              image={image}
+              selected={false}
+              onClick={() => {}}
+            />
+          );
+        })}
+      </div>
     </>
   );
 }

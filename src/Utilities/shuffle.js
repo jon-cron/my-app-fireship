@@ -2,14 +2,14 @@
 
 const shuffle = () => {
 const assets = [
-  {image: 'public\assets\dart.png'},
-  {image: 'public\assets\css.png'},
-  {image: 'public\assets\firebase.png'},
-  {image: 'public\assets\node (1).png'},
-  {image: 'public\assets\flutter.png'},
-  {image: 'public\assets\html5 (1).png'},
-  {image: 'public\assets\js.png'},
-  {image: 'public\assets\react.png'}
+  {image: '/assets/dart.png'},
+  {image: '/assets/css.png'},
+  {image: '/assets/firebase.png'},
+  {image: '/assets/node (1).png'},
+  {image: '/assets/flutter.png'},
+  {image: '/assets/html5 (1).png'},
+  {image: '/assets/js.png'},
+  {image: '/assets/react.png'}
 ]
 return [...assets, ...assets]
   .sort(() => Math.random()-0.5)
